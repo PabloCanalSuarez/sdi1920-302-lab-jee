@@ -23,7 +23,6 @@ public class ServletCarrito extends HttpServlet {
 	 */
 	public ServletCarrito() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -48,14 +47,19 @@ public class ServletCarrito extends HttpServlet {
 				insertarEnCarrito(carrito, producto);
 			}
 		}
-		response.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("<HTML>");
-		out.println("<HEAD><TITLE>Tienda SDI: carrito</TITLE></HEAD>");
-		out.println("<BODY>");
-		out.println(carritoEnHTML(carrito) + "<br>");
-		out.println("<a href=\"index.jsp\">Volver</a></BODY></HTML>");
+		// Retornar la vista con parámetro "carrito"
+		request.setAttribute("paresCarrito", carrito);
+		getServletContext().getRequestDispatcher("/vista-carrito.jsp").forward(request,
+		response);
+		
+//		response.setCharacterEncoding("UTF-8");
+//		response.setContentType("text/html");
+//		PrintWriter out = response.getWriter();
+//		out.println("<HTML>");
+//		out.println("<HEAD><TITLE>Tienda SDI: carrito</TITLE></HEAD>");
+//		out.println("<BODY>");
+//		out.println(carritoEnHTML(carrito) + "<br>");
+//		out.println("<a href=\"index.jsp\">Volver</a></BODY></HTML>");
 	}
 
 	private void insertarEnCarrito(HashMap<String, Integer> carrito, String claveProducto) {
