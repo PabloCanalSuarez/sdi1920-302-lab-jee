@@ -25,7 +25,7 @@
 	<nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<ul class="nav navbar.nav">
-			<li><a href="incluirEnCarrito">Carrito</a></li>
+			<li><a href="manejarCarrito">Carrito</a></li>
 			<li><a href="login.jsp">Login</a></li>
 			<li><a href="admin.jsp">Administrar productos</a></li>
 			<li><a href="productos">Productos</a></li>
@@ -52,7 +52,7 @@
 							<c:out value="${producto.nombre}" />
 						</div>
 						<a
-							href="incluirEnCarrito?producto=<c:out value="${producto.nombre}"/>"
+							href="manejarCarrito?opcion=add&producto=<c:out value="${producto.nombre}"/>"
 							class="btn btn-default"> <c:out value="${producto.precio}" />
 							€
 						</a>
