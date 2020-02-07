@@ -33,7 +33,6 @@ public class ServletProductos extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		HttpSession session = request.getSession();
 
 		List<Producto> productosTienda = ps.getProductos();
 		

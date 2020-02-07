@@ -56,7 +56,7 @@ public class ServletCarrito extends HttpServlet {
 				}
 				break;
 			case ELIMINAR_CARRITO:
-				eliminarDeCarrito(carrito, producto);
+				eliminarDeCarrito(carrito, producto);	
 				break;
 			default:
 				System.out.println("No existe la opción " + opcion);
