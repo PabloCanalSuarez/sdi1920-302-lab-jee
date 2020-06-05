@@ -1,2 +1,3 @@
 # sdi1920-302-lab-jee
-SDI Proyecto - Pablo Cañal Suárez
+
+Repository for 2019-2020 SDI course assignment.
